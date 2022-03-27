@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import Get from '/components/Get.vue'
 import axios from 'axios'
 export default {
   async asyncData({ $axios }) {
@@ -21,7 +20,6 @@ export default {
     return { ip }
   },
   components: {
-    Get,
   },
   data() {
     return {}
