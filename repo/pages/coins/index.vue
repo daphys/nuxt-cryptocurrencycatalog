@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="i in ip" :key="i">
-      <div class="elem">
+    <div v-for="i in ip" :key="i.id">
+      <div @click.prevent="open(i)" class="elem">
       <h1>{{i.name}}</h1>
       </div> 
     </div>
@@ -21,7 +21,11 @@ export default {
   data() {
     return {}
   },
-  methods: {},
+  methods: {
+     open(i) {
+       this.$router.push(`/coins/${i.id}`)
+    }
+  },
 }
 </script>
 
