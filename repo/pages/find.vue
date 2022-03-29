@@ -9,12 +9,14 @@
           </div>
           <div>
         <h2>
-          name:  {{ r.name }}
+          name: {{ r.name }}
         </h2>
         <h2>
           id: {{ r.symbol }}
         </h2>
-        <h2>{{ r.hashing_algorithm }}</h2>
+        <h2>
+          Alghoritm : {{ r.hashing_algorithm }}
+          </h2>
         <h2 v-html="r.description.en"></h2>
           </div>
       </div>
