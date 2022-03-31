@@ -1,5 +1,5 @@
 <template>
-    <h2>404 GTFO</h2>
+    <h2>404 - IDK WHAT HAPPENED</h2>
 </template>
 
 <script>

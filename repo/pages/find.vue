@@ -5,11 +5,11 @@
     <div v-for="r in resp" :key="r.id">
       <div class="mainContainer">
           <div class="coinImg">
-          <img :src="r.image.small" alt="">
+          <img :src="r.image.large" width="150px" alt="">
           </div>
           <div>
         <h2>
-          name: {{ r.name }}
+          Name: {{ r.name }}
         </h2>
         <h2>
           id: {{ r.symbol }}
@@ -42,14 +42,14 @@ export default {
         console.log(res);
         if (this.resp.length >= 1) {
             this.resp.length = 0;
-            console.log('13')
         } 
         else{
             this.resp.push(res.data) ;
-            this.dataFromInput = '' ; 
+            this.dataFromInput = '' ;
         } 
          }catch (error) {
             console.log(error)
+            alert('Please enter a valid coin name')
             this.dataFromInput = ''
       }
     },
@@ -65,7 +65,7 @@ export default {
 .coinImg{
     padding: 30px;
     border: 1px solid;
-    max-width: 50px;
+    max-width: 150px;
     width: 100%;
 }
 </style>

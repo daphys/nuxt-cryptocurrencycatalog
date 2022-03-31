@@ -1,19 +1,32 @@
 <template>
 <div>
+    <div class="mainContainer">
     <div v-for="r in result" :key="r.id">
         <!-- <div>{{r.id}}</div> -->
         <div>
-        {{r.name}}
-        <img :src="r.image.small" alt="">
+            <h2>
+        Name: {{r.name}}
+            </h2>
+        <br>
+        <img :src="r.image.large" width="150px" alt="">
         </div>
         <div>
-
-        {{r.hashing_algorithm}}
-        </div>
-        <div>
-            <h2 v-html="r.description.en">
+            <h2>
+        Algorithm: {{r.hashing_algorithm}}
             </h2>
         </div>
+        <div>
+            <div style="font-size : 20px">
+            <span>Description: </span>
+            <span>
+                <span v-if="r.description.en.length == 0">
+                    No description
+                </span>
+                <span v-else v-html="r.description.en"></span>
+            </span>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 </template>
@@ -39,4 +52,7 @@ export default {
 </script>
 
 <style scoped>
+.mainContainer{
+    margin: 0 auto;
+}
 </style>
