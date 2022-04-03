@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="dataFromInput" type="text" />
+    <input placeholder="Enter coin fullname" v-model="dataFromInput" type="text" />
     <button @click="getData">+</button>
     <div v-for="r in resp" :key="r.id">
       <div class="mainContainer">

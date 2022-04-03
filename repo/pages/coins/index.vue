@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="elemCont">
     <div v-for="i in ip" :key="i.id">
       <div @click.prevent="open(i)" class="elem">
       <h1>{{i.name}}</h1>
@@ -30,9 +30,11 @@ export default {
 </script>
 
 <style scoped>
+.elemCont{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
   .elem {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
